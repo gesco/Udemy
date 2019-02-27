@@ -10,7 +10,7 @@ app.get("/", function(req, res){
 app.get("/results", function(req, res){
   //res.send("Hello, it works!");
   var query = req.query.search;
-  var url = "http://omdbapi.com/?s" + query + "=iowa&apikey=thewdb";
+  var url = "http://omdbapi.com/?s=" + query + "&apikey=thewdb";
   request(url, function(error, response, body){
     if(!error && response.statusCode == 200){
       //res.send(body);
